@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="bootstrap.css">
+     <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="media.css">
+    <title>BT5 Form Validation</title>
+<!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Optional: You can add your custom CSS here -->
+</head>
+<body>
+
+<div class="container mt-5">
+  <h2 class="text-center mb-4">Btsp 5 Form Validation ( User Registration )</h2>
+<div class="container">
+  <!-- form -->
+   <form class="row g-3 needs-validation" novalidate>
+    <!-- first name -->
+  <div class="col-md-6 position-relative">
+    <label for="f_name" class="form-label">First name</label>
+    <input type="text" class="form-control f_name" id="f_name" name="f_name" placeholder="Enter Your First Name" required>
+    <div class="valid-tooltip">
+      Looks good!
+    </div>
+      <div class="invalid-tooltip">
+         Please Enter Your First Name
+      </div>
+  </div>
+<!-- last name -->
+  <div class="col-md-6 position-relative">
+    <label for="l_name" class="form-label l_name">Last name</label>
+    <input type="text" class="form-control" id="l_name" name="l_name" placeholder="Enter Your Last Name"  required>
+    <div class="valid-tooltip">
+      Looks good!
+    </div>
+      <div class="invalid-tooltip">
+         Please Enter Your Last Name
+      </div>
+  </div>
+   <!--contact no-->
+  <div class="col-md-12 position-relative">
+    <label for="contact_no" class="form-label contact_no">Contact No:</label>
+    <input type="number" class="form-control contact_no" id="contact_no" name="contact_no" placeholder="Enter Your Contact No"  required>
+    <div class="valid-tooltip">
+      Looks good!
+    </div>
+      <div class="invalid-tooltip">
+         Please Enter Your Contact No
+      </div>
+  </div>
+
+ <!-- Email Address -->
+  <div class="col-md-12 position-relative">
+    <label for="email" class="form-label email">Email Address</label>
+    <input type="email" class="form-control email" id="email" name="email" placeholder="Enter Your Email Address"  required>
+    <div class="valid-tooltip">
+      Looks good!
+    </div>
+      <div class="invalid-tooltip">
+         Please Enter Your Email Address
+      </div>
+  </div>
+<!-- city name -->
+  <div class="col-md-6 position-relative">
+    <label for="city" class="form-label city">Current City</label>
+    <input type="text" class="form-control city" id="city" name="city" placeholder="Provide Your Current City Name" required>
+    <div class="valid-tooltip">
+      Looks good!
+    </div>
+    <div class="invalid-tooltip">
+      Please provide your  current city name.
+    </div>
+  </div>
+<!-- state name -->
+   <div class="col-md-3 position-relative">
+    <label for="town_name" class="form-label town_name">Home Town Name</label>
+    <input type="text" class="form-control town_name" id="state_name" name="town_name" placeholder="Provide Your Home Town Name" required>
+    <div class="valid-tooltip">
+      Looks good!
+    </div>
+    <div class="invalid-tooltip">
+      Please provide home town name.
+    </div>
+  </div>
+<!-- zip name -->
+  <div class="col-md-3 position-relative">
+    <label for="age" class="form-label age_name">Age</label>
+    <input type="text" class="form-control age_name" id="age_name" name="age_name" placeholder="Provide Your Age" required>
+     <div class="valid-tooltip">
+      Looks good!
+    </div>
+    <div class="invalid-tooltip">
+      Please provide your age.
+    </div>
+
+
+
+  </div>
+<!-- datalist options -->
+  <label for="exampledataList" class="form-label">Select Your Occupation:</label>
+<input class="form-control" list="datalistoptions" id="exampledataList" placeholder="Type to search...">
+<datalist id="datalistoptions">
+  <option value="Farmer">
+  <option value="Teacher">
+  <option value="Doctor">
+  <option value="Actor">
+  <option value="Driver">
+    <option value="Emam">
+</datalist>
+
+ <!-- Gender Selection -->
+    <div class="mb-3">
+      <label class="form-label"> Select Your Gender</label>
+      <div class="form-check">
+        <input type="radio" class="form-check-input" id="genderMale" name="gender" value="male" required />
+        <label class="form-check-label" for="genderMale">Male</label>
+      </div>
+      <div class="form-check">
+        <input type="radio" class="form-check-input" id="genderFemale" name="gender" value="female" required />
+        <label class="form-check-label" for="genderFemale">Female</label>
+      </div>
+      <div class="invalid-feedback">Please select your gender.</div>
+    </div>
+<!-- formfile -->
+  <div class="mb-3 position-relative">
+  <label for="formfile" class="form-label">Select Your Picture:</label>
+  <input class="form-control" type="file" id="formFile">
+
+    <div class="invalid-tooltip">
+      Please provide a file.
+    </div>
+
+<!-- Password -->
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input type="password" class="form-control" id="password" name="password" required />
+      <div class="invalid-feedback">Password is required.</div>
+    </div>
+
+    <!-- Confirm Password -->
+    <div class="mb-3">
+      <label for="confirmPassword" class="form-label">Confirm Password</label>
+      <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required />
+      <div class="invalid-feedback">Please confirm your password.</div>
+    </div>
+
+
+</div>
+<!-- checkbox -->
+  <div class="col-12">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+      <label class="form-check-label" for="invalidCheck">
+        Agree to terms and conditions
+      </label>
+      <div class="invalid-feedback">
+        You must agree before submitting.
+      </div>
+    </div>
+  </div>
+
+  <div class="col-12">
+    <button class="btn btn-primary" type="submit">Submit Registration Form</button>
+  </div>
+
+</form>
+  <!-- form -->
+
+  </div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom Script -->
+<script src="script.js"></script>
+<div class="container mt-5">
+  <h2 class="text-center mb-4">Thank You for Registering!</h2>
+  <p class="lead text-center">We have received your registration. You can now log in to your account.</p>
+  <div class="text-center">
+    <a href="index.html" class="btn btn-primary">Back to Registration Form</a>
+  </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+</html>
